@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fair Trade Wine</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1 style="text-align: center;">Fair Trade Wine</h1>
+            <hr>
+            <p style="text-align: center;">Prove the authenticity of Wine using the Ethereum blockchain.</p>
+        </div>
+
+        <div class="flexcontainer">
+            <div class="col query">
+                <h2>Query an existing Wine Bottle:</h2>
+                <div class="form-group">
+                    UPC
+                    <br>
+                    <input type="number" id="upc" name="upc" value=1><br>
+                    <button class="btn-fetch" type="button" data-id="9">Fetch Data</button><br>
+                    <br>
+                    Current Owner ID
+                    <br>
+                    <input type="text" id="retrOwnerID" name="ownerID"
+                        placeholder="fetch data with a valid UPC to populate" size="50" disabled><br>
+                    Winery ID
+                    <br>
+                    <input type="text" id="retrOriginWineryID" name="originWineryID" value="" size="50"
+                        placeholder="fetch data with a valid UPC to populate" disabled><br>
+                    Winery Name
+                    <br>
+                    <input type="text" id="retrOriginWineryName" name="originWineryName" value=""
+                        placeholder="fetch data with a valid UPC to populate" disabled><br>
+                    Winery Information
+                    <br>
+                    <input type="text" id="retrOriginWineryInformation" name="originWineryInformation" value=""
+                        placeholder="fetch data with a valid UPC to populate" disabled> <br>
+                    Winery Latitude
+                    <input type="text" id="retrOriginWineryLatitude" name="originWineryLatitude" value=""
+                        placeholder="fetch data with a valid UPC to populate" disabled><br>
+                    Winery Longitude
+                    <br>
+                    <input type="text" id="retrOriginWineryLongitude" name="originWineryLongitude" value=""
+                        placeholder="fetch data with a valid UPC to populate" disabled><br>
+                    Wine Description
+                    <br>
+                    <input type="text" id="retrWineDesc" name="wineDesc" value=""
+                        placeholder="fetch data with a valid UPC to populate" disabled><br>
+                    Product Price
+                    <br>
+                    <input type="number" id="retrPrice" name="price"
+                        placeholder="fetch data with a valid UPC to populate" disabled>ETH<br>
+                    Retail Price
+                    <br>
+                    <input type="number" id="retrRetailPrice" name="retailPrice"
+                        placeholder="fetch data with a valid UPC to populate" disabled>ETH<br>
+                    Distributor ID
+                    <br>
+                    <input type="text" id="retrDistributorID" name="distributorID" size="50"
+                        placeholder="fetch data with a valid UPC to populate" disabled>
+                    <br>
+                    Retailer ID
+                    <br>
+                    <input type="text" id="retrRetailerID" name="retailerID" size="50"
+                        placeholder="fetch data with a valid UPC to populate" disabled><br>
+                    Consumer ID
+                    <br>
+                    <input type="text" id="retrConsumerID" name="consumerID" size="50"
+                        placeholder="fetch data with a valid UPC to populate" disabled><br>
+                    <br>
+                    State
+                    <br>
+                    <input type="text" id="retrItemState" name="itemState"
+                        placeholder="fetch data with a valid UPC to populate" disabled><br>
+                    <br>
+                </div>
+            </div>
+            <div class="col roles">
+                <h2>Role-specific actions </h2>
+                <hr>
+                <div class="rolescontainer">
+                    <div class="form-group winery">
+
+                        WINERY ROLE
+                        <hr>
+                        <br>
+                        Winery Name
+                        <br>
+                        <input type="text" id="originWineryName" name="originWineryName" value=""
+                            placeholder="Name of the Winery"><br>
+                        Winery Information
+                        <br>
+                        <input type="text" id="originWineryInformation" name="originWineryInformation" value=""
+                            placeholder="Winery description">
+                        <br>
+                        Winery Latitude
+                        <br>
+                        <input type="text" id="originWineryLatitude" name="originWineryLatitude" value=""
+                            placeholder="Coordinates"><br>
+                        Winery Longitude
+                        <br>
+                        <input type="text" id="originWineryLongitude" name="originWineryLongitude" value=""
+                            placeholder="Coordinates"><br>
+                        <br>
+                        Wine Description
+                        <br>
+                        <input type="text" id="wineDesc" name="wineDesc" value="" placeholder="Describe the Wine"><br>
+                        <br>
+                        <button class="btn-bottle" type="button" data-id="1">bottle</button>
+                        <br>
+                        <hr>
+                        <br>
+                        UPC
+                        <br>
+                        <input type="number" id="wineryUpc" name="wineryUpc" value="" placeholder=""><br>
+                        <br>
+                        Product Price
+                        <br>
+                        <input type="number" id="price" name="price" value=1>ETH<br>
+                        <button class="btn-forsale" type="button" data-id="2">ForSale</button>
+                    </div>
+                    <div class="form-group col distributor">
+                        DISTRIBUTOR ROLE
+                        <hr>
+                        <br>
+                        UPC
+                        <br>
+                        <input type="number" id="distributorUpc" name="distributorUpc" value="" placeholder=""><br>
+                        Product Price
+                        <br>
+                        <input type="number" id="distributorPrice" name="price" placeholder="Price in Ether">ETH<br>
+                        <button class="btn-buy" type="button" data-id="3">Buy</button>
+                        <button class="btn-ship" type="button" data-id="4">Ship</button>
+                    </div>
+                    <div class="form-group col retailer">
+                        RETAILER ROLE
+                        <hr>
+                        <br>
+                        <br>
+                        UPC
+                        <br>
+                        <input type="number" id="retailerUpc" name="retailerUpc" value="" placeholder=""><br>
+                        <button class="btn-receive" type="button" data-id="5">Receive</button><br>
+                        <br>
+                        Retail Price
+                        <br>
+                        <input type="number" id="retailPrice" name="retailPrice" placeholder="Enter price">ETH<br>
+                        <button class="btn-listForSale" type="button" data-id="6">List For Sale</button>
+                    </div>
+                    <div class="form-group col consumer">
+                        CONSUMER ROLE
+                        <hr>
+                        <br>
+                        <br>
+                        UPC
+                        <br>
+                        <input type="number" id="consumerUpc" name="consumerUpc" value="" placeholder=""><br>
+                        Retai Price
+                        <br>
+                        <input type="number" id="consumerPrice" name="price"
+                            placeholder="Price in Ether to be paid">ETH<br>
+                        <button class="btn-purchase" type="button" data-id="7">Purchase</button>
+                        <button class="btn-open" type="button" data-id="8">Open</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Transaction History<span id="ftc-history"></span></h2>
+        <div>
+            <ul id="ftc-events">
+                <!-- Events will appear here from app.js -->
+            </ul>
+            <br>
+            <hr>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://unpkg.com/web3@latest/dist/web3.min.js"></script>
+        <script src="https://unpkg.com/truffle-contract@4.0.31/dist/truffle-contract.min.js"></script>
+        <script src="js/app.js"></script>
+</body>
+
+</html>

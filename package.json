@@ -1,0 +1,21 @@
+{
+  "name": "wineum",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "sangeetkar",
+  "license": "MIT",
+  "devDependencies": {
+    "@truffle/hdwallet-provider": "^2.1.1",
+    "dotenv": "^16.0.3",
+    "lite-server": "^2.4.0"
+  },
+  "dependencies": {
+    "web3": "^1.8.1"
+  }
+}
