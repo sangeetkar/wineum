@@ -64,8 +64,8 @@ I've included sample frontend code to interact with the smart contracts in a loc
 Screenshots:
 
 ![Main page](./images/homeSnap.JPG "Main Page")
-![Query a bottle](./images/querySnap.JPG "Querying a Bottle")
 ![Winery Role](./images/winerySnap.JPG "Winery Role")
 ![Rest of the Roles](./images/restSnap.JPG "Rest of the Roles")
+![Query a bottle](./images/querySnap.JPG "Querying a Bottle")
 
 
